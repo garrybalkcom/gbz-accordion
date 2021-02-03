@@ -1,0 +1,60 @@
+html{
+    font-size:100%;
+}
+*,*::before,*::after{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:150%;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+}
+.container{
+    max-width:800px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    margin: auto;
+}
+.accordion{
+    margin:10px 20px;
+}
+.box{
+    padding:10px;
+}
+.term{
+    padding:10px;
+    background:greenyellow;
+    cursor: pointer;
+    position:relative;
+}
+.term::before{
+    content:'+';
+    position:absolute;
+    top:50%;
+    right:20px;
+    transform: translateY(-50%);
+    font-size:1.5em;
+}
+.box.active .term::before{
+    content:'-';
+}
+.definitiion{
+    height:0;
+    overflow:hidden;
+    background:green;
+    color:white;
+    overflow-y:auto;
+    transition:.5s
+}
+.box.active .definitiion{
+    height:110px;
+    padding:11px;
+}
+
